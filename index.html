@@ -3,110 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional Landing Page</title>
+
+<title>ShopEase</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+<body>
 
-<body style="margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#333;">
+<nav>
 
-    <!-- Header -->
-    <header style="background:#0f172a;color:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;">
-        <h2 style="margin:0;">YourBrand</h2>
+<div class="logo">
+<i class="fa-solid fa-cart-shopping"></i> ShopEase
+</div>
 
-        <nav>
-            <a href="index.html" style="color:white;text-decoration:none;margin:0 15px;">Home</a>
-            <a href="service.html" style="color:white;text-decoration:none;margin:0 15px;">Services</a>
-            <a href="about.html" style="color:white;text-decoration:none;margin:0 15px;">About</a>
-            <a href="contact.html" style="color:white;text-decoration:none;margin:0 15px;">Contact</a>
-        </nav>
-    </header>
+<ul>
 
-    <!-- Hero Section -->
-    <section style="display:flex;align-items:center;justify-content:space-between;padding:80px 8%;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:white;flex-wrap:wrap;">
+<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
 
-        <div style="max-width:550px;">
-            <h1 style="font-size:48px;margin-bottom:20px;">
-                Build Your Business with Confidence
-            </h1>
+<li><a href="service.html"><i class="fas fa-briefcase"></i> Services</a></li>
 
-            <p style="font-size:18px;line-height:1.8;margin-bottom:30px;">
-                We create modern digital experiences that help businesses grow faster,
-                attract more customers, and increase revenue.
-            </p>
+<li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
 
-            <a href="#" style="background:white;color:#2563eb;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:6px;display:inline-block;">
-                Get Started
-            </a>
-        </div>
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
 
-        <div>
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600"
-                 alt="Business"
-                 style="width:500px;max-width:100%;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.3);">
-        </div>
+<li><a href="login.html" class="login">Login</a></li>
 
-    </section>
+<li><a href="register.html" class="register">Register</a></li>
 
-    <!-- Features -->
-    <section style="padding:70px 8%;text-align:center;background:white;">
+</ul>
 
-        <h2 style="font-size:36px;margin-bottom:10px;">
-            Why Choose Us?
-        </h2>
+</nav>
 
-        <p style="color:#666;margin-bottom:50px;">
-            Professional solutions designed for your success.
-        </p>
+<section class="hero" id="home">
 
-        <div style="display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;">
+<div class="content">
 
-            <div style="background:#f8fafc;padding:30px;border-radius:10px;flex:1;min-width:250px;box-shadow:0 5px 15px rgba(0,0,0,.08);">
-                <h3>🚀 Fast Performance</h3>
-                <p>
-                    Optimized websites with fast loading speeds for a better user experience.
-                </p>
-            </div>
+<h1>Welcome To ShopEase</h1>
 
-            <div style="background:#f8fafc;padding:30px;border-radius:10px;flex:1;min-width:250px;box-shadow:0 5px 15px rgba(0,0,0,.08);">
-                <h3>🎨 Modern Design</h3>
-                <p>
-                    Elegant and responsive designs that look amazing on every device.
-                </p>
-            </div>
+<p>Everything You Need At One Place</p>
 
-            <div style="background:#f8fafc;padding:30px;border-radius:10px;flex:1;min-width:250px;box-shadow:0 5px 15px rgba(0,0,0,.08);">
-                <h3>🔒 Secure Platform</h3>
-                <p>
-                    Enterprise-grade security to keep your business and customers safe.
-                </p>
-            </div>
+<a href="#" class="btn">Shop Now</a>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- Call to Action -->
-    <section style="padding:70px 8%;background:#2563eb;color:white;text-align:center;">
+<section class="products">
 
-        <h2 style="font-size:38px;margin-bottom:20px;">
-            Ready to Grow Your Business?
-        </h2>
+<h2>Featured Products</h2>
 
-        <p style="font-size:18px;margin-bottom:35px;">
-            Join thousands of satisfied clients and take your business to the next level.
-        </p>
+<div class="cards">
 
-        <a href="#" style="background:white;color:#2563eb;padding:15px 35px;text-decoration:none;font-weight:bold;border-radius:6px;">
-            Contact Us
-        </a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+<h3>Sports Shoes</h3>
+<p>$120</p>
+<button>Buy Now</button>
+</div>
 
-    </section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
+<h3>Smart Watch</h3>
+<p>$250</p>
+<button>Buy Now</button>
+</div>
 
-    <!-- Footer -->
-    <footer style="background:#0f172a;color:white;text-align:center;padding:25px;">
-        <p style="margin:0;">
-            © 2026 YourBrand. All Rights Reserved.
-        </p>
-    </footer>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+<h3>Smart Phone</h3>
+<p>$899</p>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="services">
+
+<h2>Our Services</h2>
+
+<div class="service-box">
+
+<div>
+<i class="fas fa-truck"></i>
+<h3>Fast Delivery</h3>
+</div>
+
+<div>
+<i class="fas fa-headset"></i>
+<h3>24/7 Support</h3>
+</div>
+
+<div>
+<i class="fas fa-credit-card"></i>
+<h3>Secure Payment</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About Us</h2>
+
+<p>
+
+We provide high-quality products with secure payments, fast delivery and the best customer support.
+
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p><i class="fas fa-phone"></i> +91 9876543210</p>
+
+<p><i class="fas fa-envelope"></i> support@shopease.com</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 ShopEase. All Rights Reserved.</p>
+
+</footer>
 
 </body>
 </html>
