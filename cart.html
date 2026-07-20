@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEase Cart</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-cart-shopping"></i> ShopEase
+</div>
+
+<ul>
+
+<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+
+<li><a href="service.html"><i class="fas fa-briefcase"></i> Services</a></li>
+
+<li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+
+<li><a href="login.html" class="login">Login</a></li>
+
+<li><a href="register.html" class="register">Register</a></li>
+<li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+</li>
+<!-- 
+li><a href="addtocart.html" class="register">Add To Cart</a></li> -->
+
+
+</ul>
+
+</nav>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f1f3f6;
+}
+
+.cart-container{
+max-width:1400px;
+margin:30px auto;
+padding:20px;
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:25px;
+}
+
+.cart-left{
+background:#fff;
+border-radius:15px;
+padding:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.delivery{
+background:#f8fafc;
+padding:15px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.delivery button{
+background:#2563eb;
+color:#fff;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.cart-item{
+display:flex;
+gap:20px;
+padding:20px 0;
+border-bottom:1px solid #ddd;
+}
+
+.cart-item img{
+width:180px;
+height:140px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.item-info{
+flex:1;
+}
+
+.item-info h3{
+margin-bottom:8px;
+}
+
+.rating{
+color:#16a34a;
+font-size:14px;
+margin-bottom:8px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+color:#111827;
+margin-bottom:10px;
+}
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+font-size:16px;
+margin-left:10px;
+}
+
+.discount{
+color:#16a34a;
+font-weight:bold;
+}
+
+.qty{
+margin-top:15px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.qty button{
+width:35px;
+height:35px;
+border:none;
+background:#2563eb;
+color:white;
+font-size:18px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.action-btns{
+margin-top:15px;
+display:flex;
+gap:15px;
+}
+
+.action-btns button{
+border:none;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.remove{
+background:#ef4444;
+color:white;
+}
+
+.save{
+background:#f3f4f6;
+}
+
+.cart-right{
+background:#fff;
+padding:25px;
+border-radius:15px;
+height:fit-content;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+position:sticky;
+top:20px;
+}
+
+.cart-right h2{
+margin-bottom:20px;
+color:#374151;
+}
+
+.summary-row{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+}
+
+.total{
+font-size:24px;
+font-weight:bold;
+border-top:1px solid #ddd;
+padding-top:15px;
+}
+
+.coupon{
+display:flex;
+margin:20px 0;
+}
+
+.coupon input{
+flex:1;
+padding:10px;
+border:1px solid #ccc;
+border-radius:8px 0 0 8px;
+}
+
+.coupon button{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:0 8px 8px 0;
+}
+
+.payment{
+margin-top:20px;
+}
+
+.payment label{
+display:block;
+margin:10px 0;
+}
+
+.checkout{
+width:100%;
+padding:15px;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+margin-top:20px;
+cursor:pointer;
+}
+
+.secure{
+margin-top:20px;
+font-size:14px;
+color:#6b7280;
+}
+
+@media(max-width:900px){
+.cart-container{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="cart-container">
+
+<div class="cart-left">
+
+<div class="delivery">
+<div>
+📍 Deliver to Ahmedabad, Gujarat - 380015
+</div>
+<button>Change</button>
+</div>
+
+<div class="cart-item">
+
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800">
+
+<div class="item-info">
+
+<h3>HP Victus Gaming Laptop</h3>
+
+<div class="rating">
+⭐ 4.5 | 12,500 Ratings
+</div>
+
+<div class="price">
+₹64,999
+<span class="old-price">₹74,999</span>
+<span class="discount">13% Off</span>
+</div>
+
+<p>16GB RAM | RTX Graphics | 512GB SSD</p>
+
+<div class="qty">
+<button>-</button>
+<span>1</span>
+<button>+</button>
+</div>
+
+<div class="action-btns">
+<button class="save">❤️ Save For Later</button>
+<button class="remove">🗑 Remove</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="cart-right">
+
+<h2>PRICE DETAILS</h2>
+
+<div class="summary-row">
+<span>Price (1 Item)</span>
+<span>₹64,999</span>
+</div>
+
+<div class="summary-row">
+<span>Discount</span>
+<span style="color:green;">- ₹10,000</span>
+</div>
+
+<div class="summary-row">
+<span>Delivery Charges</span>
+<span style="color:green;">FREE</span>
+</div>
+
+<div class="coupon">
+<input type="text" placeholder="Coupon Code">
+<button>Apply</button>
+</div>
+
+<div class="total summary-row">
+<span>Total Amount</span>
+<span>₹54,999</span>
+</div>
+
+<div class="payment">
+<h3>Payment Method</h3>
+
+<label>
+<input type="radio" name="pay"> UPI / Google Pay
+</label>
+
+<label>
+<input type="radio" name="pay"> Credit / Debit Card
+</label>
+
+<label>
+<input type="radio" name="pay"> Cash On Delivery
+</label>
+</div>
+
+<button class="checkout">
+Proceed To Checkout
+</button>
+
+<div class="secure">
+🔒 Secure Payments <br>
+🚚 Fast Delivery <br>
+↩️ Easy Returns
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
